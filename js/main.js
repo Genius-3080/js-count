@@ -1,8 +1,13 @@
-let mevalar = ['olma', 'anor', 'behi','kiwi','shafitoli',''];
 
-mevalar.forEach((meva) => {
-  let countI = (meva.match(/i/g) || []).length; // "i" harfini necha marta hisoblash
-  if (countI === 2) {
-    console.log(meva);
-  }
-});
+
+function checkForI() {
+  let userInput = document.getElementById('userInput').value;
+  let words = userInput.split(' ');
+
+  words.forEach((word) => {
+    let countI = (word.match(/i/g) || []).length;
+    if (countI === 2) {
+      console.log(word);
+    }
+  });
+}
